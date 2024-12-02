@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo", "src\Heluo\Heluo.csproj", "{63083F1D-D00D-4834-BC50-589FE2CCF1A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo.Client", "src\Heluo.Client\Heluo.Client.csproj", "{F4FE4CF8-789B-4A0E-85AF-E4301916DFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo.Rcl", "src\Heluo.Rcl\Heluo.Rcl.csproj", "{68A033EC-1995-4119-B2C8-7EF7F63D359A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo.Server", "src\Heluo.Server\Heluo.Server.csproj", "{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F4FE4CF8-789B-4A0E-85AF-E4301916DFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FE4CF8-789B-4A0E-85AF-E4301916DFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FE4CF8-789B-4A0E-85AF-E4301916DFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FE4CF8-789B-4A0E-85AF-E4301916DFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A033EC-1995-4119-B2C8-7EF7F63D359A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A033EC-1995-4119-B2C8-7EF7F63D359A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A033EC-1995-4119-B2C8-7EF7F63D359A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A033EC-1995-4119-B2C8-7EF7F63D359A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
