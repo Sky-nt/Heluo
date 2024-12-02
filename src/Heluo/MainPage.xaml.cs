@@ -1,4 +1,4 @@
-﻿namespace Heluo;
+namespace Heluo;
 
 public partial class MainPage : ContentPage
 {

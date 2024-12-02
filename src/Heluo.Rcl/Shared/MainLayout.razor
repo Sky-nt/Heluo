@@ -1,29 +1,68 @@
-﻿@inherits LayoutComponentBase
-
+@inherits LayoutComponentBase
 <MApp>
-    <MAppBar App>
-        <MAppBarNavIcon @onclick="() => _drawer = !_drawer"></MAppBarNavIcon>
-        <MToolbarTitle>Heluo</MToolbarTitle>
-        <MSpacer></MSpacer>
-        <MButton Text Color="primary" Target="_blank" Href="https://docs.masastack.com/blazor/introduction/why-masa-blazor">About</MButton>
-    </MAppBar>
-
-    <MNavigationDrawer App @bind-Value="_drawer">
-        <MList Nav Routable>
+    <MNavigationDrawer App Permanent ExpandOnHover>
+        <MList>
+            <MListItem Class="px-2">
+                <MListItemAvatar Size="40">
+                    <MImage Src="_content/Heluo.Rcl/image/head.png"></MImage>
+                </MListItemAvatar>
+            </MListItem>
+            <MListItem>
+                <MListItemContent>
+                    <MListItemTitle Class="text-h6">
+                        河洛
+                    </MListItemTitle>
+                    <MListItemSubtitle>河出图，洛出书</MListItemSubtitle>
+                </MListItemContent>
+            </MListItem>
             <MListItem Href="/" ActiveClass="primary--text">
                 <MListItemIcon>
                     <MIcon>mdi-home</MIcon>
                 </MListItemIcon>
                 <MListItemContent>
-                    <MListItemTitle>Home</MListItemTitle>
+                    <MListItemTitle>首页</MListItemTitle>
                 </MListItemContent>
             </MListItem>
             <MListItem Href="/counter" ActiveClass="primary--text">
                 <MListItemIcon>
-                    <MIcon>mdi-plus</MIcon>
+                    <MIcon>mdi-flower-pollen</MIcon>
                 </MListItemIcon>
                 <MListItemContent>
-                    <MListItemTitle>Counter</MListItemTitle>
+                    <MListItemTitle>梅花排盘</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+            <MListItem Href="/counter" ActiveClass="primary--text">
+                <MListItemIcon>
+                    <MIcon>mdi-menu</MIcon>
+                </MListItemIcon>
+                <MListItemContent>
+                    <MListItemTitle>六爻排盘</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+            <MListItem Href="/counter" ActiveClass="primary--text">
+                <MListItemIcon>
+                    <MIcon>mdi-hand-back-right</MIcon>
+                </MListItemIcon>
+                <MListItemContent>
+                    <MListItemTitle>小六壬</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+        </MList>
+        @* <MList Nav Routable>
+            <MListItem Href="/" ActiveClass="primary--text">
+                <MListItemIcon>
+                    <MIcon>mdi-home</MIcon>
+                </MListItemIcon>
+                <MListItemContent>
+                    <MListItemTitle>首页</MListItemTitle>
+                </MListItemContent>
+            </MListItem>
+            <MListItem Href="/counter" ActiveClass="primary--text">
+                <MListItemIcon>
+                    <MIcon>mdi-flower-pollen</MIcon>
+                </MListItemIcon>
+                <MListItemContent>
+                    <MListItemTitle>梅花排盘</MListItemTitle>
                 </MListItemContent>
             </MListItem>
             <MListItem Href="/fetchdata" ActiveClass="primary--text">
@@ -34,9 +73,8 @@
                     <MListItemTitle>Fetch data</MListItemTitle>
                 </MListItemContent>
             </MListItem>
-        </MList>
+        </MList> *@
     </MNavigationDrawer>
-
     <MMain>
         <MContainer Fluid>
             <MErrorHandler>
@@ -49,5 +87,5 @@
 @code {
 
     private bool? _drawer;
-
+    private bool _mini = true;
 }

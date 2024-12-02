@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo", "src\Heluo\Heluo.csproj", "{63083F1D-D00D-4834-BC50-589FE2CCF1A0}"
 EndProject
@@ -10,6 +10,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo.Rcl", "src\Heluo.Rcl\Heluo.Rcl.csproj", "{68A033EC-1995-4119-B2C8-7EF7F63D359A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo.Server", "src\Heluo.Server\Heluo.Server.csproj", "{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{482F1CA4-AAE3-4831-B474-1D7B8C0B6B1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{F2281468-5170-4F9B-8E54-A94F32257C4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rcl", "Rcl", "{DDF1F8C8-CFD6-4F47-9F50-85F005139D83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9FB79CBC-BF82-445F-B8C3-0B559A852B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heluo.Infrastructure", "src\Heluo.Infrastructure\Heluo.Infrastructure.csproj", "{EB9A847F-E199-4E8E-B4AE-2AA38C95A54B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +45,19 @@ Global
 		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9A847F-E199-4E8E-B4AE-2AA38C95A54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9A847F-E199-4E8E-B4AE-2AA38C95A54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9A847F-E199-4E8E-B4AE-2AA38C95A54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9A847F-E199-4E8E-B4AE-2AA38C95A54B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63083F1D-D00D-4834-BC50-589FE2CCF1A0} = {482F1CA4-AAE3-4831-B474-1D7B8C0B6B1F}
+		{F4FE4CF8-789B-4A0E-85AF-E4301916DFDB} = {F2281468-5170-4F9B-8E54-A94F32257C4A}
+		{68A033EC-1995-4119-B2C8-7EF7F63D359A} = {DDF1F8C8-CFD6-4F47-9F50-85F005139D83}
+		{09D565EC-25BD-4F6C-AC18-9EE9A81CA350} = {F2281468-5170-4F9B-8E54-A94F32257C4A}
+		{EB9A847F-E199-4E8E-B4AE-2AA38C95A54B} = {9FB79CBC-BF82-445F-B8C3-0B559A852B55}
 	EndGlobalSection
 EndGlobal
