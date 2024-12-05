@@ -1,52 +1,33 @@
 @page "/"
-<MContainer Class="grey">
-    <MCard Class="card-misc-reveal" MaxWidth="344" Outlined>
-        <MCardText>
-            <div>@{}</div>
-            <p class="text-h4 text--primary">
-                el·ee·mos·y·nar·y
-            </p>
-            <p>adjective</p>
-            <div class="text--primary">
-                relating to or dependent on charity; charitable.<br>
-                "an eleemosynary educational institution."
-            </div>
-        </MCardText>
-    </MCard>
-    @* <MCard Class="mx-auto card-misc-reveal" MaxWidth="344" Outlined>
-        <MCardText>
-            <div>Word of the Day</div>
-            <p class="text-h4 text--primary">
-                el·ee·mos·y·nar·y
-            </p>
-            <p>adjective</p>
-            <div class="text--primary">
-                relating to or dependent on charity; charitable.<br>
-                "an eleemosynary educational institution."
-            </div>
-        </MCardText>
-
-        <MCardActions>
-            <MButton Text Color="teal accent-4" OnClick="() => _reveal = true">Learn More</MButton>
-        </MCardActions>
-
-        <ExpandTransition>
-            <MCard Show="@_reveal" Class="transition-fast-in-fast-out m-card--reveal" Style="height: 100%">
-                <MCardText Class="pb-0">
-                    <p class="text-h4 text--primary">
-                        Origin
-                    </p>
-                    <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
-                </MCardText>
-                <MCardActions Class="pb-0">
-                    <MButton Text Color="teal accent-4" OnClick="() => _reveal = false">Close</MButton>
-                </MCardActions>
-            </MCard>
-        </ExpandTransition>
-    </MCard> *@
-
+@using Masa.Blazor.Presets
+@using tyme.lunar
+@using Heluo.Services.ChineseCalendar;
+@inject IChineseCalendarService _chineseCalendarService;
+<MContainer Class="yellow lighten-5" Fluid="true">
+    <MRow NoGutters Class="d-flex justify-center align-center">
+        <PBlockText Primary="@dayTitle" Class="titleText" />
+    </MRow>
 </MContainer>
-
+<MContainer Fluid="true">
+    <MRow Justify="JustifyTypes.Center" AlignContent="AlignContentTypes.Center" NoGutters>
+        <MCol Cols="12" lg="2">
+            <MCard Class="card-misc-reveal" Height="500" Outlined>
+                <!-- 第一个卡片内容 -->
+            </MCard>
+        </MCol>
+        <MCol Cols="12" lg="8">
+            <MCard Class="card-misc-reveal" Height="500" Outlined>
+                <!-- 第一个卡片内容 -->
+            </MCard>
+        </MCol>
+        <MCol Cols="12" lg="2">
+            <MCard Class="card-misc-reveal" Height="500" Outlined>
+                <!-- 第二个卡片内容 -->
+            </MCard>
+        </MCol>
+        
+    </MRow>
+</MContainer>
 <style>
     .card-misc-reveal .m-card--reveal {
         bottom: 0;
@@ -54,9 +35,26 @@
         position: absolute;
         width: 100%;
     }
+    .titleText {
+        display: flex; /* 使用 Flexbox */
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        font-size: 42px; /* 初号字体，标准大约为42px */
+        font-weight: bold; /* 加粗 */
+        height: 100%; /* 可根据需要调整高度 */
+        text-align: center; /* 文本居中对齐 */
+        line-height: 1.5; /* 调整行高，保证视觉效果 */
+        color:darkgoldenrod
+    }
+
 </style>
 
 @code {
-    bool _reveal;
-
+    string dayTitle;
+    LunarDay chineseCalendar;
+    protected override void OnInitialized()
+    {
+        chineseCalendar = _chineseCalendarService.GetChineseCalendarDay(DateTime.Now);
+        dayTitle = chineseCalendar.ToString().Replace("农历", "");
+    }
 }

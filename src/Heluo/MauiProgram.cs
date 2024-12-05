@@ -1,3 +1,4 @@
+using Heluo.Services.ChineseCalendar;
 using Heluo.Rcl;
 using Microsoft.Extensions.Logging;
 
@@ -18,6 +19,7 @@ public static class MauiProgram
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
+		builder.Services.AddSingleton<IChineseCalendarService,ChineseCalendarService>();
 		builder.Logging.AddDebug();
 #endif
 		return builder.Build();
