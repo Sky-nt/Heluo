@@ -1,6 +1,5 @@
-using Heluo.Services.ChineseCalendar;
-using Heluo.Rcl;
 using Microsoft.Extensions.Logging;
+using Heluo.Infrastructure.Core.TypeFinder;
 
 namespace Heluo;
 public static class MauiProgram
@@ -8,6 +7,7 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
+
 		builder.UseMauiApp<App>()
 			   .ConfigureFonts(fonts =>
 			   {
@@ -16,10 +16,13 @@ public static class MauiProgram
 
 		builder.Services.AddMauiBlazorWebView();
 		builder.Services.AddMasaBlazor();
+		builder.Services.BuildServiceProvider();
+
+
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
-		builder.Services.AddSingleton<IChineseCalendarService,ChineseCalendarService>();
+		builder.Services.AddSingleton<IHLTypeFinder,HLTypeFinder>();
 		builder.Logging.AddDebug();
 #endif
 		return builder.Build();

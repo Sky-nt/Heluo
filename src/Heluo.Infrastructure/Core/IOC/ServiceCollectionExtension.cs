@@ -1,9 +1,8 @@
+using Heluo.Infrastructure.Core.Initialization;
+using Heluo.Infrastructure.Core.TypeFinder;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using SmartInfrastructure.Dependency;
 
 namespace Heluo.Infrastructure.Core.IOC;
 public static class ServiceCollectionExtension
@@ -13,10 +12,17 @@ public static class ServiceCollectionExtension
 	/// </summary>
 	/// <param name="services"></param>
 	/// <returns></returns>
-	public static IServiceCollection AddIOC(this IServiceCollection services)
-	{ 
+	public static IServiceCollection AddIOC(this IServiceCollection service)
+	{
+		var typeFinder = SingletonToolInitialization.Instance().GetTool<IHLTypeFinder>();
+		var scopeImplementationTypes = typeFinder.FinderClass<IScopeDependency>();
 
+		
 
-		return services;
+		foreach (var scopeImplementationType in scopeImplementationTypes)
+		{
+			var descriptor = new ServiceDescriptor(typeof(IScopeDependency), scopeImplementationType, lifetime.Value);
+			services.Add(descriptor);
+		}
 	}
 }
