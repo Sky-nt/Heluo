@@ -36,15 +36,4 @@ public interface IHLTypeFinder
     List<Type> FinderClassByAttribute<T>() where T : Attribute;
 
 	#endregion
-
-	#region 根据类型查找接口
-
-	/// <summary>
-	/// 根据类型查找接口
-	/// </summary>
-	/// <param name="type"></param>
-	/// <returns></returns>
-	List<Type> FinderInterfaces(Type type);
-
-	#endregion
 }

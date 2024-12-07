@@ -1,3 +1,4 @@
+using SmartInfrastructure.Dependency;
 using tyme.lunar;
 using tyme.solar;
 
@@ -6,7 +7,7 @@ namespace Heluo.Services.ChineseCalendar;
 /// <summary>
 /// 农历服务
 /// </summary>
-public class ChineseCalendarService : IChineseCalendarService
+public class ChineseCalendarService : IChineseCalendarService, IScopeDependency
 {
 	/// <summary>
 	/// 获取农历日

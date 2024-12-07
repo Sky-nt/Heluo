@@ -133,11 +133,11 @@ public class HLTypeFinder:IHLTypeFinder
 		{
 			if (IsMatch(interfaceType.FullName))
 			{
-				if (targetType.IsAssignableFrom(interfaceType) || (CompareGeneric(targetType, type)))
+				if (targetType.IsAssignableFrom(interfaceType) || (CompareGeneric(targetType,interfaceType)))
 				{
-					if (type.IsInterface)
+					if (interfaceType.IsInterface)
 					{
-						result.Add(type);
+						result.Add(interfaceType);
 					}
 				}
 			}

@@ -16,7 +16,7 @@
             </MCard>
         </MCol>
         <MCol Cols="12" lg="8">
-            <MCard Class="card-misc-reveal" Height="500" Oustlined>
+            <MCard Class="card-misc-reveal" Height="500" Outlined>
                 <!-- 第一个卡片内容 -->
             </MCard>
         </MCol>
@@ -25,7 +25,6 @@
                 <!-- 第二个卡片内容 -->
             </MCard>
         </MCol>
-
     </MRow>
 </MContainer>
 <style>
@@ -55,6 +54,6 @@
     protected override void OnInitialized()
     {
         chineseCalendar = _chineseCalendarService.GetChineseCalendarDay(DateTime.Now);
-        dayTitle = chineseCalendar.ToString().Replace("农历", "");
+        dayTitle = chineseCalendar.ToString().Replace("农历","");
     }
 }
